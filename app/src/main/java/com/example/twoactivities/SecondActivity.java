@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 
 public class SecondActivity extends AppCompatActivity {
     private static final String LOG_TAG = SecondActivity.class.getSimpleName();
@@ -11,6 +12,8 @@ public class SecondActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
+        Log.d(LOG_TAG, "-------");
+        Log.d(LOG_TAG, "onCreate");
     }
 
     @Override
@@ -53,5 +56,12 @@ public class SecondActivity extends AppCompatActivity {
         Log.d(LOG_TAG, "End SecondActivity");
         finish();
     }
+
+    public void returnReply(View view) {
+        Log.d(LOG_TAG, "End SecondActivity");
+        // ... tu código existente ...
+        finish();
+    }
+
 
 }
