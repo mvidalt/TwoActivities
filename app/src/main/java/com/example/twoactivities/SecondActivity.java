@@ -2,21 +2,15 @@ package com.example.twoactivities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
 
-public class MainActivity extends AppCompatActivity {
-    private static final String LOG_TAG = MainActivity.class.getSimpleName();
-
+public class SecondActivity extends AppCompatActivity {
+    private static final String LOG_TAG = SecondActivity.class.getSimpleName();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        Log.d(LOG_TAG, "-------");
-        Log.d(LOG_TAG, "onCreate");
-
+        setContentView(R.layout.activity_second);
     }
 
     @Override
@@ -55,11 +49,9 @@ public class MainActivity extends AppCompatActivity {
         Log.d(LOG_TAG, "onDestroy");
     }
 
-
-    public void openSecondActivity(View view) {
-        // Create an explicit intent to open SecondActivity
-        Intent intent = new Intent(this, SecondActivity.class);
-        startActivity(intent);
+    public void returnReply() {
+        Log.d(LOG_TAG, "End SecondActivity");
+        finish();
     }
 
 }
