@@ -16,7 +16,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Log.d(LOG_TAG, "-------");
         Log.d(LOG_TAG, "onCreate");
-
     }
 
     @Override
@@ -57,7 +56,6 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void openSecondActivity(View view) {
-        // Create an explicit intent to open SecondActivity
         Intent intent = new Intent(this, SecondActivity.class);
         startActivity(intent);
     }

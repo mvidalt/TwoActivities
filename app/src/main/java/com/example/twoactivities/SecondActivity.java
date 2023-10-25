@@ -2,6 +2,7 @@ package com.example.twoactivities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -59,9 +60,12 @@ public class SecondActivity extends AppCompatActivity {
 
     public void returnReply(View view) {
         Log.d(LOG_TAG, "End SecondActivity");
-        // ... tu código existente ...
         finish();
     }
 
+    public void volver_atras(View view){
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
 
 }
